@@ -4,11 +4,11 @@ using System.IO;
 
 namespace MBTiles.Provider
 {
-    public class MBTileProvider
+    public class MbTileProvider
     {
         private readonly string _connectionString;
 
-        public MBTileProvider(string connectionString)
+        public MbTileProvider(string connectionString)
         {
             _connectionString = connectionString;
         }
@@ -33,6 +33,7 @@ namespace MBTiles.Provider
                 }
             }
             connection.Close();
+            connection.Dispose();
             return image;
         }
     }
